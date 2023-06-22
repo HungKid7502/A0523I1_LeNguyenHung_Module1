@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May Tinh Don Gian</title>
+</head>
+<body>
+    <div class="container">
+    <table>
+        <tr class="display">
+            <td colspan="4" ><input id="display" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="set('1')" ></input></td>
+            <td><input type="button" value="2" onclick="set('2')" ></input></td>
+            <td><input type="button" value="3" onclick="set('3')" ></input></td>
+            <td><input type="button" value="+" onclick="set('+')" ></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="set('4')" ></input></td>
+            <td><input type="button" value="5" onclick="set('5')" ></input></td>
+            <td><input type="button" value="6" onclick="set('6')" ></input></td>
+            <td><input type="button" value="-" onclick="set('-')" ></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="set('7')" ></input></td>
+            <td><input type="button" value="8" onclick="set('8')" ></input></td>
+            <td><input type="button" value="9" onclick="set('9')" ></input></td>
+            <td><input type="button" value="x" onclick="set('*')" ></input></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="C" onclick="ce('c')" ></input></td>
+            <td><input type="button" value="0" onclick="set('0')" ></input></td>
+            <td><input type="button" value="=" onclick="answer('=')" ></input></td>
+            <td><input type="button" value="/" onclick="set('/')" ></input></td>
+        </tr>
+    </table>
+    </div>
+
+<style>
+    *{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-color: #e3fff9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    table {
+        background-color: #3a4452;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    table input[type=text] {
+        width: 250px;
+        height: 45px;
+        text-align: right;
+        margin: 10px;
+        font-size: 2em;
+    }
+    
+    table input[type=button] {
+        width: 50px;
+        height:45px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 5px;
+    }
+</style> 
+
+<script>
+    function set(op) {
+        document.getElementById("display").value += op;
+    }
+
+    function answer() {
+    var Exp = document.getElementById("display");
+    var Exp1 = Exp.value;
+    var result = eval(Exp1);
+    //alert(result);
+    Exp.value = result;
+    } 
+    
+    function ce() {
+    var elem = document.getElementById("display").value;
+    var length = elem.length;
+    length--;
+    var a = elem.substr(0, length);
+
+    // document.getElementById("display").value="";
+    //for(var i=0;i<length-1;i++)
+    //{
+    document.getElementById("display").value = a;
+    // }
+    //alert(length);
+    }
+</script>
+</body>
+</html>
