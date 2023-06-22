@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp hạng học lực theo điểm bài kiểm tra</title>
+</head>
+<body>
+    <script>
+        let bkt = parseFloat(prompt("Nhập điểm bài kiểm tra ( hệ số 1 ):", "5"));
+        let gk = parseFloat(prompt("Nhập điểm thi giữa kì ( hệ số 2 ):", "5"));
+        let ck = parseFloat(prompt("Nhập điểm bài cuối kì ( hệ số 3 ):", "5")); 
+        ketqua = bkt + gk * 2 + ck * 3;
+        if (ketqua >= 8) {
+            alert("Học sinh giỏi!")
+        }else if (ketqua < 8 && ketqua >= 6.5) {
+            alert("Học sinh tiên tiến!")
+        }else if (ketqua < 6.5 && ketqua >= 5) {
+            alert("Học sinh trung bình!")
+        }else {
+            alert("Học sinh yếu!")
+        }
+    </script>
+</body>
+</html>
