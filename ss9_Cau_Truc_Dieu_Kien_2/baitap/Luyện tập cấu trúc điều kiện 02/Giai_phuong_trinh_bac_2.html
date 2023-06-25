@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải phương trình bậc 2</title>
+</head>
+<body>
+    <h2>Giải phương trình bậc 2</h2>
+    <lable for="a">Enter the coefficient a (not 0):</lable>
+    <input type="text" id="a"><p></p>
+    <label for="b">Enter the coefficient b:</label>
+    <input type="text" id="b"><p></p>
+    <lable for="c">Enter the coefficient c:</lable>
+    <input type="text" id="c">
+    <p id="show" onclick="show()">We have the equation:</p>
+    <br>
+    <input type="button" value="Solve the equation" onclick="solve()">
+    <p id="result">The solution of the equation is:</p>
+    <script>  
+        // Hàm hiển thị phương trình
+        function show() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+            var s = a +'x^2 + ' + b +'x + ' + c;
+            document.getElementById('show').innerText = s;
+        }
+        // Hàm kết quả
+        function solve() {
+            var a = parseFloat(document.getElementById('a').value);
+            var b = parseFloat(document.getElementById('b').value);
+            var c = parseFloat(document.getElementById('c').value);
+            var delta = b*b - 4*a*c; 
+            if (delta < 0) {
+                var result = 'The equation has no solution';
+                document.getElementById('result').innerText = result;
+            }else if(delta == 0) {
+                var result = 'The equation has a double solution: x = ' + (-b/2*a);
+                document.getElementById('result').innerText = result;
+            }else {
+                x1 = (-b + Math.sqrt(delta)) / (2*a);
+                x2 = (-b - Math.sqrt(delta)) / (2*a);
+                var result = 'The equation has 2 distinct solutions:' + 'x1 = ' + x1 +' và x2 = ' + x2; 
+                document.getElementById('result').innerText = result;
+            }
+        }
+    </script>
+    <style>
+        *{
+            background-color: #e3fff9;
+        }
+    </style>
+</body>
+</html>
