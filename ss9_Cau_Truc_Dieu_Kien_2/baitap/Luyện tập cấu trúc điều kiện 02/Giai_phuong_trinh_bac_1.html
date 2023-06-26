@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giải phương trình bậc 1</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Giải phương trình bậc 1</h2>
     <label for="a">Enter the coefficient a:</label>
-    <input type="text" id="a">
+    <input type="text" id="a" />
     <p></p>
     <lable for="b">Enter the coefficient b:</lable>
-    <input type="text" id="b">
+    <input type="text" id="b" />
     <p id="show" onclick="show()">We have the equation:</p>
-    <br>
-    <input type="button" value="Solve the equation" onclick="solve()">
+    <br />
+    <input type="button" value="Solve the equation" onclick="solve()" />
     <p id="result">The solution of the equation is:</p>
     <script>
-        function show() {  
-            var a = parseFloat(document.getElementById('a').value);
-            var b = parseFloat(document.getElementById('b').value);
-            var s = a + 'x + ' + b;
-            document.getElementById('show').innerText = s;
+      function show() {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var s = a + "x + " + b;
+        document.getElementById("show").innerText = s;
+      }
+
+      function solve() {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        if (a == 0) {
+          if (b == 0) {
+            var result = "The equation has many solution";
+            document.getElementById("result").innerText = result;
+          } else {
+            var result = "The equation has no solution";
+          }
+        } else {
+          let x = -b / a;
+          document.getElementById("result").innerText = "x = " + x;
         }
-        
-        function solve() {
-            var a = parseFloat(document.getElementById('a').value);
-            var b = parseFloat(document.getElementById('b').value);
-            if (a == 0) {
-                if(b == 0) {
-                    var result = 'The equation has many solution';
-                    document.getElementById('result').innerText = result;
-                }else {
-                    var result = 'The equation has no solution';
-                }
-            }else {
-                let x = -b / a;
-                document.getElementById('result').innerText = 'x = ' + x;
-            }
-        }
+      }
     </script>
     <style>
-        *{
-            background-color: #e3fff9;
-        }
+      * {
+        background-color: #e3fff9;
+      }
     </style>
-</body>
+  </body>
 </html>
