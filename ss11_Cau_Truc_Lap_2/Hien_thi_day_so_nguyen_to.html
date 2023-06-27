@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hiển thị dãy số nguyên tố</title>
-
+</head>
 <body>
     <label for="elements">Nhập n số nguyên tố cần hiển thị:</label>
     <input type="text" id="elements">
@@ -12,29 +13,33 @@
     <p id="display"></p>
 
     <script>
-        function checkPrime() {
+        function checkPrime(number) {
             if (number < 2) {
                 return false;
-            } else {
-                for (var i = 2; i < Math.sqrt(number); i++) {
-                    if (number % i == 0) {
-                        return false;
-                    }
-                }
-                return true;
             }
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+
         }
 
         function display() {
-            var count = 0, number = 2;
+            var number = 2;
+            var count = 1;
             var n = parseInt(document.getElementById("elements").value);
-            while (count < n) {
+            var output = document.getElementById("display");
+            output.innerHTML = "";
+            while (count <= n) {
                 if (checkPrime(number)) {
-                    document.getElementById("display").innerHTML = number;
-                    document.write("<br>");
+                    var element = document.createElement("p");
+                    element.innerHTML = number;
+                    output.appendChild(element);
                     count++;
                 }
-                number++;               
+                number++;
             }
         }
     </script>
