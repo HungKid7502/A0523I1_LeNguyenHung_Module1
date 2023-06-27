@@ -4,32 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tìm số nguyên tố đầu tiên chia hết cho 5</title>
   </head>
-
   <body>
     <h2>Hiển thị dãy Fibonacci</h2>
     <label for="elements">Nhập n phần tử cần hiển thị</label>
     <input type="number" id="elements" />
     <input type="button" value="Hiển thị" onclick="Fibonacci()" />
-    <p>In ra dãy 20 số nguyên tố đầu tiên</p>
+    <p>In ra số nguyên tố đầu tiên chia hết cho 5</p>
     <p id="display"></p>
+    <p id="chia5"></p>
   </body>
   <script>
     function Fibonacci() {
       var a = 1,
         b = 0;
       var next;
-      var fi = "0 ";
-      var sum = 1;
       var n = document.getElementById("elements").value;
+      var fi = "0 ";
       for (var i = 1; i <= n; i++) {
         next = a + b;
         a = b;
         b = next;
         fi = fi + " " + next;
+        if (next % 5 == 0) {
+          chia5 = next;
+          break;
+        }
       }
       document.getElementById("display").innerText = fi;
+      document.getElementById("chia5").innerText =
+        "Số nguyên tố đầu tiên chia hết cho 5 là: " + chia5;
     }
   </script>
 </html>

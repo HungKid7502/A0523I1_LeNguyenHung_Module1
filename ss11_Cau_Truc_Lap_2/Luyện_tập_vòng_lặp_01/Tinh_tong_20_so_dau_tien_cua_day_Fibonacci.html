@@ -4,21 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tổng 20 số đầu tiên của dãy Fibonacci</title>
   </head>
 
   <body>
-    <h2>Hiển thị dãy Fibonacci</h2>
-    <label for="elements">Nhập n phần tử cần hiển thị</label>
+    <label for="elements">Nhập n phần tử cần hiển thị:</label>
     <input type="number" id="elements" />
     <input type="button" value="Hiển thị" onclick="Fibonacci()" />
-    <p>In ra dãy 20 số nguyên tố đầu tiên</p>
+    <p>n phần tử đầu tiên trong dãy Fibonacci:</p>
     <p id="display"></p>
+    <p>Tổng n phần tử đầu tiên của dãy:</p>
+    <p id="sumFibo"></p>
   </body>
   <script>
     function Fibonacci() {
-      var a = 1,
-        b = 0;
+      var a = 1;
+      var b = 0;
       var next;
       var fi = "0 ";
       var sum = 1;
@@ -28,8 +29,10 @@
         a = b;
         b = next;
         fi = fi + " " + next;
+        sum += next;
       }
       document.getElementById("display").innerText = fi;
-    }
+      document.getElementById("sumFibo").innerText = sum;
+    }  
   </script>
 </html>
