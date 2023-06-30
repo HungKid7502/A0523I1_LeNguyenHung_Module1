@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <tittle></tittle>
+  </head>
+
+  <body>
+    <script>
+      var n = prompt("Mời bạn nhập n phần tử:");
+      let i = 0;
+      let count = 0;
+      let sum = 0;
+      while (count <= n) {
+        if (i % 7 == 0) {
+          document.write(i + "<br>");
+          count++;
+          sum = sum + i;
+        }
+        i++;
+      }
+      document.write("Tổng các số n phần tử chia hết cho 7 đầu tiên là: " + sum);
+    </script>
+  </body>
+</html>
