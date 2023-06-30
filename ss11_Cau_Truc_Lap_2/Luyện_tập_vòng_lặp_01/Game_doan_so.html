@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game đoán số</title>
+  </head>
+  <body>
+    <h2>Đoán số ngẫu nhiên</h2>
+    <input type="button" value="Chơi" onclick="choi()" />
+    <script>
+      var canTren = +(prompt("Nhập cận trên:"));
+      var canDuoi = +(prompt("Nhập cận dưới:"));
+      var random = Math.round(Math.random(canTren - canDuoi) + canTren);
+      var solan = 1;
+      do {
+          var so = +prompt("Nhập số:");
+          if (so === random) {
+              alert("Chúc mừng bạn đã chiến thắng");
+              break;
+          } else if (so < random) {
+              alert("Số bạn nhập nhỏ hơn số random");
+          } else {
+              alert("Số bạn nhập lớn hơn số random");
+          }
+
+          if(solan == 3) {
+              alert("Bạn đã nhập đủ 3 lần");
+          }
+          solan++;
+      } while(solan <= 3)
+    </script>
+  </body>
+</html>

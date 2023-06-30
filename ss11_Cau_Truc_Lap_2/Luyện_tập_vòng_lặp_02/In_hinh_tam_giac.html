@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>In hình tam giác</title>
+  </head>
+  <body>
+    <script>
+      // hình số 1
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br><br.<br>");
+
+      // hình thứ 2
+      for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+      document.write("<br><br.<br>");
+
+      // hình thứ
+      for (let i = 1; i <= 5; i++) {
+        // vong lap ve khoang trang giam dan
+        for (let j = 4; j >= i; j--) {
+          document.write("&nbsp&nbsp");
+        }
+
+        for (let j = 1; j <= i; j++) {
+          document.write("*");
+        }
+
+        document.write("<br/>");
+      }
+      document.write("<br><br.<br>");
+
+      // hình thứ 4
+      for (let i = 1; i <= 5; i++) {
+        //vong lap ve khoang trang tang dan
+        for (let j = 0; j <= i; j++) {
+          document.write("&nbsp&nbsp");
+        }
+        for (let j = 5; j >= i; j--) {
+          document.write("*");
+        }
+        document.writeln("<br/>");
+      }
+    </script>
+  </body>
+</html>
