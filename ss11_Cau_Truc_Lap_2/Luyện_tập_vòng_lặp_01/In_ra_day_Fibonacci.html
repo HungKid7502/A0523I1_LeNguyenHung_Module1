@@ -21,14 +21,16 @@
       var b = 0;
       var next;
       var fi = "0 ";
-      var n = document.getElementById("elements").value;
+      // var output = document.getElementById('display')
+      var n = document.getElementById('elements').value;
       for (var i = 1; i < n; i++) {
         next = a + b;
         a = b;
         b = next;
-        fi = fi + " " + next;
+        fi = fi + " " + next; 
+        // output.innerHTML += next + " "; 
       }
-      document.getElementById("display").innerHTML = fi;
+      document.getElementById('display').innerHTML = fi;
     }
   </script>
 </html>
