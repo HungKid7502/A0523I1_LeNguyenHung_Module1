@@ -21,7 +21,6 @@
       var b = 0;
       var next;
       var fi = "0 ";
-      var sum = 1;
       var n = document.getElementById("elements").value;
       for (var i = 1; i < n; i++) {
         next = a + b;
@@ -29,7 +28,7 @@
         b = next;
         fi = fi + " " + next;
       }
-      document.getElementById("display").innerText = fi;
+      document.getElementById("display").innerHTML = fi;
     }
   </script>
 </html>
