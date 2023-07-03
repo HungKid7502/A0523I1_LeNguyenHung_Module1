@@ -29,6 +29,7 @@
         var s = a + "x^2 + " + b + "x + " + c;
         document.getElementById("show").innerText = s;
       }
+     
       // Hàm kết quả
       function solve() {
         var a = parseFloat(document.getElementById("a").value);
@@ -40,7 +41,7 @@
           document.getElementById("result").innerText = result;
         } else if (delta == 0) {
           var result =
-            "The equation has a double solution: x = " + (-b / 2) * a;
+            "The equation has a double solution: x = " + (-b / 2 * a);
           document.getElementById("result").innerText = result;
         } else {
           x1 = (-b + Math.sqrt(delta)) / (2 * a);
