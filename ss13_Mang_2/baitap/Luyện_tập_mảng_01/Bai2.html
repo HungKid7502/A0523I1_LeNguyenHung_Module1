@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var array = new Array(10);
+      max = 0;
+      for (var i = 0; i < 10; i++) {
+        array[i] = +prompt("array[" + i + "] = ");
+      }
+
+      for (var i = 0; i < 10; i++) {
+        if (array[i] > max) {
+          max = array[i];
+        }
+      }
+      var indexMax = array.indexOf(max);
+      document.write("Giá trị lớn nhất trong mảng là: " + max + "</br>");
+      document.write("Index của nó là: " + indexMax);
+    </script>
+  </body>
+</html>
+
+<!-- 
+    array[i] = (Math.floor(Math.random() * (20 - 0 + 1)) + 0);  // hàm random một số ngẫu nhiên để add vào mảng
+    array.sort((a, b) => a - b);
+    max = array[array.lenght - 1];
+
+    // thuật toám bubble soft
+    var arr = [12, 2, 8, 5, 1, 6, 4, 15];
+        for(i = 0; i < arr.length - 1; i++) {
+            for(j = arr.length - 1; j > i; j--) {
+                if(arr[j] < arr[j -1]) {
+                    a = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = a;
+                }
+            }
+        }
+-->
