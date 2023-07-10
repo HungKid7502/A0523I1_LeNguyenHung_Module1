@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var pl = prompt("Input planet's name:");
+      var planet1 = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      var planet2 = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+      function check_Planet(pl) {
+        var index = planet1.indexOf(pl);
+        if (index == -1) {
+          document.write("No has planet in planet1[]");
+        }
+        document.write(`${pl} at index ${index}` + "</br>");
+        document.write(
+          `Value at index ${index} of planet2[] is ${planet2[index]}`
+        );
+      }
+      check_Planet(pl);
+    </script>
+  </body>
+</html>
