@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var n = prompt("Nhập số phần tử");
+      // dùng đệ quy
+      function factorial(number) {
+        if (number == 0 || number == 1) {
+          return 1;
+        }
+        return number * factorial(number - 1);
+      }
+      for (var i = 0; i <= n; i++) {
+        document.write(i + "! = " + factorial(i));
+        document.write("<br>");
+      }
+
+/*     // khử đệ quy
+      function factorial(number) {
+        var number = 1;
+        for (var i = 1; i <= n; i++) {
+            number = number * i;
+        return number;
+        }
+      } */
+    </script>
+  </body>
+</html>

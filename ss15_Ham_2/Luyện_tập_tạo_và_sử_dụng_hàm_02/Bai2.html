@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr rowspan="2">
+            <td>Bán kính hình tròn r:</td>
+            <td><input type="text" id="radius" oninput="chuVi_dienTich()"></td>      
+        </tr>
+        <tr>
+            <td id>Chu vi hình tròn</td>
+            <td id>Diện tích hình tròn</td>
+        </tr>
+        <tr>
+            <td id="perimeter"></td><td id="acreage"></td>
+        </tr>
+    </table>
+    <script>
+        function chuVi_dienTich() {
+            var r = document.getElementById("radius").value; 
+            var result1 = 2 * Math.PI * r;
+            var result2 = Math.PI * r * r;
+            document.getElementById("perimeter").innerHTML = result1;
+            document.getElementById("acreage").innerHTML = result2;
+        }
+    </script>
+</body>
+</html>
