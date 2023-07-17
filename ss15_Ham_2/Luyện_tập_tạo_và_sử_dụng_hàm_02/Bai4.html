@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var char = +prompt("Nhập vào kí tự");
+        function kiemTra() {
+            var result = isNaN(char);
+            if(result) {
+                alert("Đây không phải là kí tự số")
+            } else {
+                alert("Đây là kí tự số");
+            }
+        }
+        kiemTra();
+    </script>
+</body>
+</html>

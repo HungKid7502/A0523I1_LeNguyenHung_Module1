@@ -1,25 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        var array = [4, 3, 8, 12, 27, 11, 9, 5];
-        function swap_Array() {
-           for(var i = 0; i < array.length; i++) {
-                for (var j = array.length - 1; j > i; j--) {
-                    var temp;
-                    temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-            }
-            document.write(array);
-        }
-        swap_Array(); 
+      var array = [4, 3, 8, 12, 27, 11, 9, 5];
+      function swap_Array(array) {
+        var array1 = array.reverse();
+        document.write(array1);
+      }
+      swap_Array(array);
     </script>
-</body>
+  </body>
 </html>

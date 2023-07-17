@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  // Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không
-  // Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1. 
+   <!-- Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự -->
+  <!-- bất kỳ đó có nằm trong mảng không  Nếu có trả về số lần xuất hiện của ký tự 
+  đó, nếu không trả về -1. -->
   <body>
     <script>
       function check_Characters(array, crt) {
@@ -29,9 +30,11 @@
       //array[i] = prompt("");
       // }
 
-      check_Characters(array, crt);
+      if (check_Characters(array, crt) == -1) {
+      alert(`Không có kí tự trong mảng`);
+      }
       var result = check_Characters(array, crt);
-      alert(`Kí tự xuất hiện ${result} lần`); 
+      alert(`Kí tự xuất hiện ${result} lần`);
     </script>
   </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var number1 = parseInt(prompt("Nhập vào số thứ nhất:"));
+    var number2 = parseInt(prompt("Nhập vào số thứ hai:"));
+    function swap_number(a, b) {
+    document.write("Số thứ nhất là:" + a + "</br>"+"Số thứ hai là:" + b + "</br>");
+    var c = a;
+    a = b;
+    b = c;
+    document.write("Số thứ nhất đã đổi là:" + a +"</br>"+"Số thứ hai đã đổi là:" + b);
+    }
+    swap_number(number1, number2);
+</script>
+</body>
+</html>

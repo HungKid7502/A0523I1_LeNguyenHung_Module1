@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất. -->
+    <script>
+      var number1 = Math.round(Math.random() * (100 - 0 + 0));
+      var number2 = Math.round(Math.random() * (100 - 0 + 0));
+      var number3 = Math.round(Math.random() * (100 - 0 + 0));
+
+      function timMin(number1, number2, number3) {
+        var result = Math.min(number1, number2, number3);
+        return result;
+      }
+      alert("Số nhỏ nhất là: " + timMin(number1, number2, number3));
+    </script>
+  </body>
+</html>
