@@ -1,25 +1,25 @@
-addition() {
+function addition() {
     let a = parseFloat(document.getElementById("number1").value);
     let b = parseFloat(document.getElementById("number2").value);
     r = a + b;
     document.getElementById("result").innerHTML = r;
 }
 
-subtraction() {
+function subtraction() {
     let a = parseFloat(document.getElementById("number1").value);
     let b = parseFloat(document.getElementById("number2").value);
     r = a - b;
     document.getElementById("result").innerHTML = r;
 }
 
-multiplication() {
+function multiplication() {
     let a = parseFloat(document.getElementById("number1").value);
     let b = parseFloat(document.getElementById("number2").value);
     r = a * b;
     document.getElementById("result").innerHTML = r;
 }
 
-division() {
+function division() {
     let a = parseFloat(document.getElementById("number1").value);
     let b = parseFloat(document.getElementById("number2").value);
     r = a / b;
