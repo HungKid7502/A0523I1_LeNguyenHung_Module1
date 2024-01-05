@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6</title>
+</head>
+    <p><h2>Tinh Tien Hoa Hong</h2></p>
+    <input type="number" placeholder="Nhap doanh thu" id="tD">
+    <button onclick="hoaHong">Tien Hoa Hong</button>
+            <p id="hoahong"></p></br>
+<body>
+    <script>
+        function hoaHong() {
+            let tienDoanhThu = +document.getElementById("tD").value;
+            if (tienDoanhThu >= 50000000) {
+                hoaHong = tienDoanhThu * 0.2;
+                document.getElementById("hoahong").innerHTML= "Result: " + hoaHong;
+            } else if (tienDoanhThu < 50000000 && tienDoanhThu >= 30000000) {
+                hoaHong = tienDoanhThu * 0.1;
+                document.getElementById("hoahong").innerHTML= "Result: " + hoaHong;
+            } else if (tienDoanhThu < 30000000 && tienDoanhThu >= 10000000) {
+                hoaHong = tienDoanhThu * 0.05;
+                document.getElementById("hoahong").innerHTML= "Result: " + hoaHong;
+            } else (tienDoanhThu < 10000000) {
+                hoaHong = tienDoanhThu * 0.02;
+                document.getElementById("hoahong").innerHTML= "Result: " + hoaHong;
+            }
+        }
+
+        </script>
+</body>
+</html>

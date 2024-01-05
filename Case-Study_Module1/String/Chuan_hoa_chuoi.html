@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <video src=""></video>
+    <button onclick="main()">Run</button>
+    <script>
+        
+
+         
+
+        // function find_longest_word(str) {
+        //     let array1 = str.match(/\w[a-z]{0,}/gi);
+        //     let result = array1[0];
+
+        //     for (let x = 1; x < array1.length; x++) {
+        //         if (result.length < array1[x].length) {
+        //             result = array1[x];
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        function main() {
+            var inputString = prompt("Nhap xau ki tu");
+            document.write("Xau chuan hoa: " + standardizeString(inputString) + "<br>");
+            // document.write("Tu dai nhat: " + find_longest_word(inputString));
+        }
+
+        function standardizeString(inputString) {
+             const array = inputString.toLowerCase().split(" ");
+            //  hàm split: tách chuỗi thành các phần tử và được lưu trữ dưới dạng mảng
+             console.log(array);
+// làm việc vs mảng thì dùng vlap for
+
+            for (var i = 0; i < array.length; i++) {
+                // ['le', 'nguyen', ''hung]
+                array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+                // ["Le", "Nguyen", "Hung"]
+             }
+             console.log(array);
+
+             return array.join(" ");
+         }
+    </script>
+
+</body>
+<!-- // function standardizeString(inputString) {
+    //     const array = inputString.toLowerCase().split("");
+
+    //     for (var i = 0; i < array.length; i++) {
+    //         if (array[i] == " " && array[i - 1] == " ") {
+    //             array.splice(i, 1);
+    //             i--;
+    //         }
+
+    //         if (array[i - 1] == " ") {
+    //             array[i] = array[i].toUpperCase();
+    //         }
+    //     }
+    //     array[0] = array[0].toUpperCase();
+    //     return array.join("");
+    // } -->
+
+</html>

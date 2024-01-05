@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3 -->
+
+<body>
+    <script>
+        var str = prompt("Nhap xau ki tu:");
+        document.write("Xau ban dau la: " + str + "<br>");
+        var arr = str.toLowerCase().split("");
+        console.log(arr);
+        arr.sort();
+        var newStr = [];
+        for (var i = 0; i < arr.length; i++) {
+            if (i == 0) {
+                newStr.push(arr[i]);
+            } else {
+                if (arr[i] != arr[i - 1]) {
+                    newStr.push(arr[i]);
+                }
+            }
+        }
+
+        document.write("So ki tu khac nhau trong xau la: " + newStr.length + "<br>");
+        document.write('Cac ki tu khac nhau la: ' + newStr);
+    </script>
+</body>
+
+</html>

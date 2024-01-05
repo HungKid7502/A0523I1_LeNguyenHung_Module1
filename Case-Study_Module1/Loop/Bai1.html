@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Vẽ tam giác vuông cân rỗng có chiều cao h. Ví dụ: h = 5 -->
+
+<body>
+    <script>
+        var h = +prompt("Nhập vào chiều cao của tam giác");
+        for (var i = 1; i <= h; i++) {
+            // duyệt dòng
+            if (i == 1 || i == 2 || i === h) {
+                // vẽ dấu sao
+                for (var j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            } else {
+                for (j = 1; j <= i; j++) {
+                    if (j == 1 || j == i) {
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                }
+                document.write("<br>");
+            }
+        } 
+    </script>
+</body>
+
+</html>

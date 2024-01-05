@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- Cho mảng array chỉ chứa các số nguyên 
+    Xây dựng mảng array_prefixSum là mảng cộng dồn của mảng a -->
+
+<body>
+    <script>
+        do {
+            var n = prompt("Nhập số phần tử của mảng:");
+        } while (isNaN(n) || n <= 0);
+        // Khởi tạo mảng
+        var array = [];
+        for (var i = 0; i < n; i++) {
+            array[i] = +prompt("Nhập phần tử array[" + i + "]");
+            // dùng dấu cộng để chuyển thành kiểu số nếu ko sẽ thành cộng chuỗi
+            if (isNaN(array[i])) {
+                alert("Mời bạn nhập lại");
+                array[i] = +prompt("Nhập phần tử array[" + i + "]");
+            }
+        }
+        document.write("Array = " + array);
+        document.write("</br>");
+
+        // Khởi tạo mảng prefixSum
+        var array_prefixSum = [];
+        for (var i = 0; i < n; i++) {
+            if (i == 0) {
+                array_prefixSum[i] = array[i];
+            } else {
+                array_prefixSum[i] = array[i] + array_prefixSum[i - 1];
+            }
+        }
+        document.write("Array prefix Sum = " + array_prefixSum);
+
+    </script>
+
+</body>
+
+</html>

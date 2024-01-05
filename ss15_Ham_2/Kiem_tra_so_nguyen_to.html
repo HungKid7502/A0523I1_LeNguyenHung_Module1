@@ -6,7 +6,8 @@
     <title>Kiểm tra số nguyên tố</title>
   </head>
   <body>
-    Number <input type="text" id="number" oninput="display()" /> is:
+    Number <input type="text" id="number" /> is:
+    <button onclick="display()">Kiểm tra</button>
     <span id="display"></span>
   </body>
   <script>
@@ -24,6 +25,8 @@
 
     function display() {
       var number = document.getElementById("number").value;
+      var number = document.getElementById("number").value;
+  
       if (isPrime(number)) {
         document.getElementById("display").innerHTML = "prime";
       } else {

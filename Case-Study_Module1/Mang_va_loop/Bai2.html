@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Cho 2 mảng A và B chứa số nguyên
+Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A
+*Chú ý các phần tử giống nhau chỉ tính là 1 lần xuất hiện -->
+    <script>
+        function elementNotA(A, B) {
+            // Tạo 2 mảng nhận từ mảng A và B đã loại bỏ giá trị trùng lặp
+            const uniqueA = Array.from(new Set(A));
+            const uniqueB = Array.from(new Set(B));
+
+            // Tạo một mảng mới chứa các phần tử của mảng B mà không xuất hiện trong mảng A
+            var missingValue = uniqueB.filter((element) => !uniqueA.includes(element));
+            
+            // Sắp xếp mảng
+            missingValue.sort((a, b) => a - b);
+            return missingValue;
+        }
+        const A = [7, 2, 5, 3, 5, 3, 2];
+        const B = [7, 2, 5, 4, 6, 3, 5, 3, 4];
+        document.write("Array A = " + A + "<br>");
+        document.write("Array B = " + B + "<br>");
+        document.write(" Array missingValue = " + elementNotA(A, B) + "<br>");
+        
+    </script>
+
+</body>
+
+</html>
